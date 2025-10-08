@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ecotec - Soluciones Sustentables</title>
+  
+  <meta name="description" content="Ecotec - Soluciones sustentables en energía, reciclaje y eficiencia para empresas.">
+  <link rel="icon" href="favicon.jpg">
+  <link rel="stylesheet" href="estilos.css" >
+  <style>
+    :root{
+      --green:#10B981; /* emerald-ish */
+      --dark:#0f1720; /* almost black */
+      --muted:#6b7280; /* gray */
+      --bg:#f8fafc; /* light */
+      --card:#ffffff;
+      --accent: #064e3b;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,var(--bg), #ffffff);
+      color:var(--dark);
+      -webkit-font-smoothing:antialiased;
+    }
+    header{
+      display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:transparent;position:sticky;top:0;z-index:50;
+      backdrop-filter: blur(6px);
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--green),#047857);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:22px;box-shadow:0 6px 18px rgba(2,6,23,0.08)}
+    nav a{margin-left:18px;text-decoration:none;color:var(--dark);font-weight:600}
+    .btn{background:var(--green);color:white;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(16,185,129,0.18)}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 460px;gap:32px;max-width:1200px;margin:36px auto;padding:28px}
+    .hero-card{background:var(--card);padding:36px;border-radius:16px;box-shadow:0 8px 30px rgba(2,6,23,0.06)}
+    h1{font-size:34px;margin:0 0 12px;color:var(--dark)}
+    p.lead{color:var(--muted);line-height:1.6}
+    .stats{display:flex;gap:12px;margin-top:18px}
+    .stat{background:linear-gradient(180deg,rgba(6,95,70,0.04),rgba(16,185,129,0.02));padding:10px 14px;border-radius:12px}
+    .media{display:flex;flex-direction:column;gap:12px}
+
+    /* cards grid */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+    .service{background:linear-gradient(180deg,var(--card),#fbfffd);padding:18px;border-radius:12px;border:1px solid rgba(10,10,10,0.03)}
+    .service h3{margin:6px 0 8px}
+    .features{margin-top:24px;display:flex;flex-direction:column;gap:12px}
+
+    /* Footer */
+    footer{margin-top:36px;background:linear-gradient(180deg, #001219, #001f1a);color:#e6f7ef;padding:28px;border-radius:12px}
+    .footer-grid{display:flex;justify-content:space-between;gap:18px;max-width:1200px;margin:0 auto}
+
+    /* Contact card */
+    .contact{background:linear-gradient(180deg,rgba(16,185,129,0.06),rgba(4,116,87,0.02));padding:18px;border-radius:12px}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(15,23,32,0.06);font-size:14px}
+    label{font-size:13px;color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr; padding:18px}
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      nav a{display:none}
+      .grid{grid-template-columns:1fr}
+    }
+
+    /* small utilities */
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(16,185,129,0.12);color:var(--accent);font-weight:700}
+    .muted{color:var(--muted)}
+    .center{display:flex;align-items:center;justify-content:center}
+    .cta-row{display:flex;gap:12px;margin-top:18px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo"><img src="favicon.jpg" alt="" width="60px"></div>
+      <div>
+        <div style="font-weight:800">Ecotec</div>
+        <div style="font-size:12px;color:var(--muted)">Soluciones sustentables</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+      <a class="btn" href="#contacto">Contáctanos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="hero">
+      <div class="hero-card">
+        <span class="pill">Empresa · Innovación · Verde</span>
+        <h1>Clasifica automáticamente residuos</h1>
+        <p class="lead">Ecotec es una microempresa privada constituida como S.A.S, enfocada en generar beneficios
+            económicos de forma flexible y con trámites simples.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn" href="#contacto">Solicitar cotización</a>
+          <a href="#nosotros" style="align-self:center;color:var(--muted);text-decoration:none">Conócenos →</a>
+        </div>
+
+        <div class="features">
+          <div class="service" style="display:flex;gap:12px;align-items:center">
+            <div style="width:56px;height:56px;border-radius:8px;background:#10B981;display:flex;align-items:center;justify-content:center;color:white;font-weight:700">ECO</div>
+            <div>
+              <h3>Eco</h3>
+              <div class="muted" style="font-size:13px">Medio ambiente, sostenibilidad, naturaleza.</div>
+            </div>
+          </div>
+          <div class="service" style="display:flex;gap:12px;align-items:center">
+            <div style="width:56px;height:56px;border-radius:8px;background: #add8e6;;display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700">TEC</div>
+            <div>
+              <h3>Tec</h3>
+              <div class="muted" style="font-size:13px">Herramientas, sistemas y conocimientos tecnológicos.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </section>
+
+
+
+    <section id="nosotros" style="max-width:800px;margin:18px auto;padding:18px">
+      <h2>Misión</h2>
+      <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+        <div style="flex:1;min-width:250px">
+          <p class="muted">Convertirse en un referente a nivel Madrid en la
+implementación de tecnologías inteligentes
+para la gestión de residuos urbanos,
+empresariales y domésticos.</p>
+          
+        </div>
+        <div style="width:320px;padding:16px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#f7fff9);box-shadow:0 8px 20px rgba(2,6,23,0.04)">
+          <strong>Visión</strong>
+          <p class="muted" style="margin:8px 0 0">Contribuir al desarrollo ecológico con
+soluciones tecnológicas que optimicen la
+clasificación de residuos, promoviendo
+prácticas sostenibles y eficientes así
+reduciendo el impacto ambiental..</p>
+        </div>
+      </div>
+    </section>
+    <br><br>
+ <section style="text-align:center; padding:40px 0;">
+  <h2>Presentación</h2>
+  <div style="max-width:1200px; margin:auto; box-shadow:0 0 10px rgba(0,0,0,0.1); border-radius:12px;">
+    <iframe 
+      src="ECO TEC.pdf" 
+      width="100%" 
+      height="700px" 
+      style="border:none; border-radius:12px;">
+    </iframe>
+  </div>
+</section>
+
+
+
+
+
+
+    <section id="contacto" style="max-width:900px;margin:18px auto;padding:18px">
+      <h2>Contacto</h2>
+      <div style="display:grid;grid-template-columns:1fr 340px;gap:18px">
+        <div class="hero-card contact">
+          <form action="eco.tec.servicest@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Nombre</label>
+            <input id="name" name="Nombre" required placeholder="Tu nombre">
+            <div style="height:8px"></div>
+            <label for="company">Empresa</label>
+            <input id="company" name="Empresa" placeholder="Nombre de la empresa">
+            <div style="height:8px"></div>
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="Mensaje" rows="5" placeholder="Cuéntanos tu proyecto" required></textarea>
+            <div style="height:12px"></div>
+            <button type="submit" class="btn">Enviar mensaje</button>
+          </form>
+        </div>
+
+        <aside style="align-self:start">
+          <div style="background:linear-gradient(180deg,#f0fff9,#f8fff8);padding:18px;border-radius:12px;border:1px solid rgba(6,95,70,0.06)">
+            <h4 style="margin:0 0 8px">Oficinas</h4>
+            <div class="muted">Calle 6sur # 23-187 · Madrid, Cundinamarca, Colombia</div>
+            <div style="height:12px"></div>
+            <h4 style="margin:0 0 8px">Horario</h4>
+            <div class="muted">Lun - Vie · 8:00 - 17:00</div>
+            <div style="height:12px"></div>
+            <h4 style="margin:0 0 8px">Teléfono</h4>
+            <div style="muted">+57 318 349 8911</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex;gap:12px;align-items:center"><div class="logo" style="width:44px;height:44px"><img src="favicon.jpg" alt="" width="50px" style="border-radius: 35%;"></div><strong>Ecotec</strong></div>
+        <p class="muted" style="max-width:420px;margin-top:8px">Comprometidos con soluciones sostenibles y medibles para hacer tu empresa más eficiente.</p>
+      </div>
+      <div style="text-align:right">
+        <div style="font-weight:700">Síguenos</div>
+        <div class="muted" style="margin-top:8px">instagram · X </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
